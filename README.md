@@ -1,1 +1,2 @@
-# juIUWPY
+# swing-to-survive
+Sling Game
