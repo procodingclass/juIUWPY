@@ -6,18 +6,15 @@ var bgImg, bottleImg;
 
 
 var bottles = [
-  { x: 200, y: 230, isAttached: true },
-  { x: 300, y: 230, isAttached: false },
-  { x: 400, y: 230, isAttached: false },
-  { x: 500, y: 230, isAttached: false },
-  { x: 600, y: 230, isAttached: false },
-  { x: 700, y: 230, isAttached: false },
+  { x: 300, y: 280},
+  { x: 400, y: 280 },
+  { x: 500, y: 280 },
 
 ];
 
 function preload() {
-  bgImg = loadImage("./assets/bg.jpg");
-  bottleImg = loadImage("./assets/bottle.png");
+  bgImg = loadImage("bg.png");
+  bottleImg = loadImage("bottle.png");
 }
 
 function setup() {
@@ -42,14 +39,11 @@ function handleBottles() {
   addBottles();
   for (let i = 0; i < bottles.length; i++) {
       drawBottles(i);
-      // Move the bottles
-      bottles[i].x -= 1;
-      //remove the bottles when they reach the unit
+      // Move the bottles to the left
+
+      
       if (bottles[i].x < 300) {
-        //bottles.pop();
-        //bottles.remove();
-        //bottles.delete();
-        //bottles.shift();
+        bottles.shift();
       }
   }
 }
@@ -63,12 +57,9 @@ function drawBottles(i) {
 }
 
 function addBottles() {
-  // add new bottles into the array.
-  if (bottles.length < 7) {
-    // bottles.pop({x: 800,y: 230,});
-    // bottles.push({x: 800,y: 230,});
-    // bottles.add({x: 800,y: 230,});
-    // bottles.create({x: 800,y: 230,});
+  if (bottles.length < 4) {
+  // push new bottles into the array.   
+    
   }
 }
 
